@@ -70,9 +70,6 @@ BEGIN
 	RAISE NOTICE '>> Load Duration: % ms', EXTRACT(EPOCH FROM (end_time - start_time))* 1000;
 	RAISE NOTICE '------------------------------------';
 
-
-	
-	
 	-- Truncate silver.crm_prd_info
 	start_time := clock_timestamp();
 	RAISE NOTICE '>> Truncating Table: silver.crm_prd_info';
@@ -107,7 +104,7 @@ BEGIN
 	end_time := clock_timestamp();
 	RAISE NOTICE '>> Load Duration: % ms', EXTRACT(EPOCH FROM (end_time - start_time))* 1000;
 	RAISE NOTICE '------------------------------------';
-	
+
 	-- Truncate crm_sales_details
 	start_time := clock_timestamp();
 	RAISE NOTICE '>> Truncating Table: silver.crm_sales_details';
@@ -159,14 +156,10 @@ BEGIN
 	RAISE NOTICE '>> Load Duration: % ms', EXTRACT(EPOCH FROM (end_time - start_time))* 1000;
 	RAISE NOTICE '------------------------------------';
 
-	
-	
+
 	RAISE NOTICE '------------------------------------';
 	RAISE NOTICE 'Loading ERP Tables';
 	RAISE NOTICE '------------------------------------';
-
-
-	
 	-- Truncate erp_cust_az12
 	start_time := clock_timestamp();
 	RAISE NOTICE '>> Truncating Table: silver.erp_cust_az12';
